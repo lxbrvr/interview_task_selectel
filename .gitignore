@@ -1,0 +1,9 @@
+.idea/
+.pyc
+.pyx
+__pycache__/
+env/
+tmp/
+sqlite.db
+test.db
+.pytest_cache/
