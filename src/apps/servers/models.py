@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, ForeignKey, String, DateTime
+from sqlalchemy import Column, Integer, ForeignKey, String, TIMESTAMP
 from sqlalchemy.orm import relationship
 
 from apps.servers.enums import ServerStatus
@@ -16,5 +16,5 @@ class Server(BaseModel):
     __tablename__ = 'server'
 
     rack_id = Column(Integer, ForeignKey('rack.id'), nullable=False)
-    paid_at = Column(DateTime)
+    paid_at = Column(TIMESTAMP)
     status = Column(String(7), nullable=False, default=ServerStatus.UNPAID)
